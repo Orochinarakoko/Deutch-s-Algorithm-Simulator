@@ -7,4 +7,8 @@ Imagine you had to determine, from one of 4 functions - NOT (flip input bit), ID
 -Input a 1, and f(1) = 0 . Only now can we determine that the function is variable (NOT). This is the case for all 4 of the functions.
 
 
-However, David Deutsch and developed an algorithm that can determine whether the function is constant or variable in 1 query, using quantum computing. Using a series of gates (mathematically reperesented by martices), the properties of each function can be manipulated such that after inputting 2 qubits in to Deutsch's algorithm, one of the qubits will always return 0 if the function is variable or 1 if the function is constant
+However, David Deutsch and developed an algorithm that can determine whether the function is constant or variable in 1 query, using quantum computing. Using a series of gates (mathematically reperesented by martices), the properties of each function can be manipulated such that after inputting 2 qubits in to Deutsch's algorithm, one of the qubits will always return 0 if the function is constant or 1 if the function is variable. 
+
+A proof by the University of Cambridge can be found here: https://www.cl.cam.ac.uk/teaching/1920/QuantComp/Quantum_Computing_Lecture_7.pdf
+
+My code works by choosing a function from on of the 4 at random, and then uses qiskit to input 2 qubits in to Deutsch's algorithm 100 time, outputting the results. If the code is one of the constants, the second qubit in every reading will be zero ( i.e 00 or 10 ) and if the function is variable, the second qubit will always be 1 ( ie 01 or 11).
